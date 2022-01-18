@@ -128,7 +128,7 @@ ui <- fluidPage(titlePanel("Running trainings analyze", windowTitle = "RUN2021")
                 tabsetPanel(
                   tabPanel("Rakenduse kirjeldus",
                            sidebarLayout(
-                             sidebarPanel(img(height = 180, width = 240, src = "images.png")),
+                             sidebarPanel(img(height = "100%", width = "100%", src = "images.png")),
                              mainPanel(
                                h1("Rakenduse kirjeldus"),
                                p("Antud too eesmargiks on prognoosida maksimaalse hapniku tarbimisvoime (VO2max) mojutajaid ja leida ules head ja halvad jooksutreeningud. Antud masinoppe algoritmi eesmargiks on tulevikus luua rakendus, mis suudab eelnevate treeningute pohjal anda jargmise treeningu jaoks vajaliku sisendi sudameloogisageduse ja/voi kiiruse naol, et koormus oleks kehale voimalikult efektiivne. Eesmark on tootada valja algoritm ennustamaks jargmise treeningule sobivat koormust - sudameloogisagedust, kiirust ja treeningu tuupi. Analuusi jaoks kasutati r-studio rakenduses lineaarse regressioonimudelit, otsustuspuu mudelit ning segadus maatriksit toesuse kontrolliks."),
@@ -175,9 +175,9 @@ ui <- fluidPage(titlePanel("Running trainings analyze", windowTitle = "RUN2021")
                   ),
                   tabPanel("Otsustuspuu mudel",
                            mainPanel(h1("Classification tree"),
-                                     p("Otsusepuu tarvis genereerisin andmetesse dummy muutujad. Muutujatest taheldub, et kui vo2max vaartus on 58 voi korgem ning korgem voi vordne vorreldes eelmise treeninguga, siis treening on "Good", kui alla selle vaartuse, siis 'Bad'"), br(), 
+                                     p("Otsusepuu tarvis genereerisin andmetesse dummy muutujad. Muutujatest taheldub, et kui vo2max vaartus on 58 voi korgem ning korgem voi vordne vorreldes eelmise treeninguga, siis treening on 'Good', kui alla selle vaartuse, siis 'Bad'"), br(), 
                                     p("Allpool oleval joonisel on naha, et vaga palju mojutab vo2max vaartust aeroobses tsoonis jooksmine, kiirus aeglasemalt voi vordselt 5,1min/km. Aeroobse treeningu intensiivsus peaks olema suurem voi vordne 2,6."),
-                             img(height = 180, width = 240, src = "Rplot.png"),
+                             img(height = "100%", width = "100%", src = "Rplot.png"),
                                      verbatimTextOutput("classificationPlot"))
                            ),
                   tabPanel("Segadus maatriks",
